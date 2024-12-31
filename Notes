@@ -1,0 +1,37 @@
+Additional Information / Notes
+
+1. API Rate Limitations
+The OpenWeather API free tier allows up to 60 API calls per minute.
+If the app stops working or fails to fetch data, it may be due to exceeding the rate limit. Consider upgrading your API plan for higher limits if needed.
+
+2. Error Handling
+City Not Found: If the entered city name is invalid or unavailable in the OpenWeather database, an error message will be displayed.
+Network Issues: Ensure your internet connection is stable, as the app relies on fetching data from an external API.
+
+3. Units of Measurement
+By default, the app displays temperature in Celsius using the units=metric parameter in the API request.
+To display temperature in Fahrenheit, you can change the parameter to units=imperial in the API URL:
+javascript
+
+const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
+4. Icon Display
+Weather icons are dynamically updated based on the icon field in the API response. These icons provide a visual representation of the weather conditions.
+
+5. Deployment Notes
+Ensure you set up environment variables for your API key in a real-world deployment to prevent unauthorized use. For local testing, the API key can remain hardcoded.
+The app is tested and works well in modern browsers (e.g., Chrome, Edge, Firefox).
+
+6. Compatibility
+The app is designed to be responsive and works on desktop, tablet, and mobile devices.
+CSS styles are tested in major browsers. Minor inconsistencies may appear on older browsers.
+
+7. Future Improvements
+Search Suggestions: Add an autocomplete dropdown for city names.
+Geolocation: Use the user's current location to fetch weather data automatically.
+Error Logging: Log errors to a monitoring tool for better debugging in production environments.
+
+8. Useful Links
+OpenWeather API Documentation
+Font Awesome Icons
+CSS Gradient Tool
