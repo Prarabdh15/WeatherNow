@@ -1,5 +1,5 @@
 
-const apiKey = '26bd67fc32a13ce10b8d55790497a609';
+const apiKey = 'YOUR API KEY';
 
 
 const form = document.querySelector('form');
